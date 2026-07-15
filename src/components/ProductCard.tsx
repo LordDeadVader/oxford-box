@@ -15,7 +15,7 @@ export default function ProductCard({ product, onOpenModal }: Props) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4 }}
-      className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#12141A] cursor-pointer"
+      className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md cursor-pointer hover:border-[#C5A880]/30 hover:shadow-[0_8px_32px_rgba(197,168,128,0.15)] transition-all duration-300"
       onClick={() => onOpenModal(product)}
     >
       {/* Image */}
@@ -32,9 +32,9 @@ export default function ProductCard({ product, onOpenModal }: Props) {
       </div>
 
       {/* Info */}
-      <div className="p-5">
-        <h3 className="text-white font-semibold text-lg mb-1">{product.name}</h3>
-        <p className="text-white/50 text-sm leading-relaxed mb-4">{product.description}</p>
+      <div className="p-6">
+        <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-[#C5A880] transition-colors">{product.name}</h3>
+        <p className="text-white/60 text-sm leading-relaxed mb-5">{product.description}</p>
         <button
           onClick={(e) => {
             e.stopPropagation();

@@ -28,15 +28,15 @@ export default function CatalogGrid() {
         </motion.div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-md ${
                 activeCategory === cat
-                  ? 'bg-gradient-to-r from-[#C5A880] to-[#D4AF37] text-black shadow-[0_0_20px_rgba(197,168,128,0.3)]'
-                  : 'border border-white/10 text-white/60 hover:text-white hover:border-white/30'
+                  ? 'bg-gradient-to-r from-[#C5A880] to-[#D4AF37] text-black shadow-[0_0_24px_rgba(197,168,128,0.4)] border border-transparent'
+                  : 'bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/30'
               }`}
             >
               {cat}

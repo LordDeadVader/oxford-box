@@ -75,18 +75,19 @@ export default function Hero() {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button
-              onClick={() => handleScroll('#catalogo')}
-              className="shimmer-btn relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-[#C5A880] to-[#D4AF37] text-black font-semibold text-lg hover:shadow-[0_0_40px_rgba(197,168,128,0.6)] transition-all duration-300 hover:scale-105"
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+            <a
+              href="#catalogo"
+              onClick={(e) => { e.preventDefault(); document.querySelector('#catalogo')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#C5A880] to-[#D4AF37] text-black font-semibold tracking-wide hover:shadow-[0_0_30px_rgba(197,168,128,0.6)] transition-all duration-300 hover:scale-105 text-center shimmer-btn relative overflow-hidden"
             >
               Explorar Catálogo
-            </button>
+            </a>
             <a
-              href={makeWhatsAppUrl('Olá! Gostaria de solicitar um projeto sob medida com a Oxford Box.')}
+              href={makeWhatsAppUrl('Olá! Gostaria de um projeto sob medida.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white font-semibold text-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-xl text-white font-medium hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center hover:border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
             >
               Projeto Sob Medida
             </a>
