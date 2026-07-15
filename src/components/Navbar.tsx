@@ -45,10 +45,8 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="flex items-center gap-1">
-            <span className="text-white font-bold text-xl tracking-widest uppercase">OXFORD</span>
-            <span className="text-[#C5A880] font-bold text-xl tracking-widest">.</span>
-            <span className="text-white/70 font-light text-xl tracking-widest uppercase">BOX</span>
+          <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="flex items-center">
+            <img src="/logo.png" alt="Oxford Box" className="h-8 md:h-10 w-auto object-contain" />
           </a>
 
           {/* Desktop Links */}

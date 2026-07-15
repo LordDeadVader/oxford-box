@@ -7,10 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-1 mb-4">
-              <span className="text-white font-bold text-2xl tracking-widest uppercase">OXFORD</span>
-              <span className="text-[#C5A880] font-bold text-2xl">.</span>
-              <span className="text-white/60 font-light text-2xl tracking-widest uppercase">BOX</span>
+            <div className="mb-6">
+              <img src="/logo.png" alt="Oxford Box" className="h-10 md:h-12 w-auto object-contain" />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Especialistas em box de banheiro de alto padrão, vidraçaria arquitetônica e espelhos em Curitiba e Região.
