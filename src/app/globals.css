@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300..700&family=Syne:wght@400..800&display=swap');
 
 @import "tailwindcss";
 
@@ -10,8 +10,8 @@
   --color-gold: #D4AF37;
   --color-crystal: #E0E2EC;
 
-  --font-sans: 'Julius Sans One', sans-serif;
-  --font-display: 'Fugaz One', cursive;
+  --font-sans: 'Manrope', sans-serif;
+  --font-display: 'Syne', sans-serif;
 
   --animate-ken-burns: ken-burns 12s ease-out forwards;
 
@@ -38,14 +38,15 @@ html {
 body {
   background-color: var(--obsidian);
   color: var(--crystal);
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
-  font-family: 'Fugaz One', cursive;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 ::-webkit-scrollbar {
