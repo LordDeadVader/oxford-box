@@ -46,7 +46,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="flex items-center">
-            <img src="/logo.png" alt="Oxford Box" className="h-8 md:h-10 w-auto object-contain" />
+            <img src="/logo.png" alt="Oxford Box" className="h-14 md:h-20 w-auto object-contain" />
           </a>
 
           {/* Desktop Links */}
