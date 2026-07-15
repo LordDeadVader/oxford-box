@@ -6,7 +6,6 @@ import { makeWhatsAppUrl } from '@/data/mockData';
 const navLinks = [
   { label: 'Início', href: '#inicio' },
   { label: 'Catálogo', href: '#catalogo' },
-  { label: 'Espelhos', href: '#espelhos' },
   { label: 'Galeria', href: '#galeria' },
   { label: 'Contato', href: '#contato' },
 ];
