@@ -5,9 +5,9 @@ export const makeWhatsAppUrl = (message: string) =>
   `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`;
 
 export const heroImages = [
-  'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1920&q=80',
-  'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80',
-  'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1920&q=80'
+  '/box1.jpg',
+  '/box2.jpg',
+  '/box3.jpg'
 ];
 
 export const diferenciais = [
@@ -61,7 +61,7 @@ export const products: Product[] = [
     name: 'Box Frontal (F1)',
     tag: 'Mais Vendido',
     description: 'O modelo clássico para vãos retos. Composto por uma porta fixa e uma deslizante, otimizando o espaço do seu banheiro.',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    image: '/box1.jpg',
     details: ['Vidro temperado 8mm', 'Perfis de alumínio estrutural', 'Roldanas de nylon com rolamento', 'Trinco de segurança magnético'],
   },
   {
@@ -70,7 +70,7 @@ export const products: Product[] = [
     name: 'Box de Canto (F2)',
     tag: 'Ideal para L',
     description: 'Solução perfeita para cantos. Abertura em 90 graus com duas portas de correr, garantindo o máximo de passagem.',
-    image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80',
+    image: '/box2.jpg',
     details: ['Formato em L', 'Duas portas deslizantes', 'Transpasse perfeito sem vazamentos', 'Acabamentos em diversas cores'],
   },
   {
@@ -79,7 +79,7 @@ export const products: Product[] = [
     name: 'Box Elegance Inox',
     tag: 'Alto Padrão',
     description: 'O suprassumo do design. Roldanas blindadas em aço inox 304 correndo sobre tubo superior. Sem perfil embaixo.',
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80',
+    image: '/box3.jpg',
     details: ['Sistema Elegance Inox 304', 'Sem trilho inferior', 'Roldanas blindadas aparentes', 'Vidro 8mm Extra-Clear opcional'],
   },
   {
@@ -88,7 +88,7 @@ export const products: Product[] = [
     name: 'Box com Porta de Abrir',
     tag: 'Minimalista',
     description: 'Para vãos menores ou necessidades de acessibilidade. Porta pivotante com dobradiças de latão maciço.',
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80',
+    image: '/box4.jpg',
     details: ['Dobradiças de Alta Resistência', 'Fechamento suave', 'Puxador tipo H em Inox', 'Vedação total com silicone neutro'],
   },
 ];
@@ -102,8 +102,9 @@ export const categories: ProductCategory[] = [
 ];
 
 export const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Box instalado' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80', alt: 'Box de banheiro alto padrão' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=700&q=80', alt: 'Roldanas aparentes' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80', alt: 'Box vidro 8mm' },
+  { id: 1, src: '/box1.jpg', alt: 'Box instalado' },
+  { id: 2, src: '/box2.jpg', alt: 'Box de banheiro alto padrão' },
+  { id: 3, src: '/box3.jpg', alt: 'Roldanas aparentes' },
+  { id: 4, src: '/box4.jpg', alt: 'Box vidro 8mm' },
+  { id: 5, src: '/box5.jpg', alt: 'Box design' },
 ];

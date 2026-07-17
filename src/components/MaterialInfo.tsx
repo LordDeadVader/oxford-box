@@ -13,7 +13,7 @@ export default function MaterialInfo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=600&q=80"
+            src="/box1.jpg"
             alt="Detalhe do vidro"
             className="rounded-2xl w-full h-64 object-cover"
           />
@@ -22,7 +22,7 @@ export default function MaterialInfo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80"
+            src="/box2.jpg"
             alt="Roldanas"
             className="rounded-2xl w-full h-64 object-cover mt-8"
           />
