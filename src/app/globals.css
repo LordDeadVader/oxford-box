@@ -9,6 +9,11 @@
   --color-champagne: #C5A880;
   --color-gold: #D4AF37;
   --color-crystal: #E0E2EC;
+  --color-light-bg: #F8F9FA;
+  --color-light-gray: #F0F2F5;
+  --color-dark-text: #111827;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1DA851;
 
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Syne', sans-serif;
@@ -28,6 +33,10 @@
   --champagne: #C5A880;
   --gold: #D4AF37;
   --crystal: #E0E2EC;
+  --light-bg: #F8F9FA;
+  --light-gray: #F0F2F5;
+  --dark-text: #111827;
+  --whatsapp: #25D366;
 }
 
 
@@ -36,8 +45,8 @@ html {
 }
 
 body {
-  background-color: var(--obsidian);
-  color: var(--crystal);
+  background-color: var(--light-bg);
+  color: var(--dark-text);
   font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,7 +63,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--obsidian);
+  background: var(--light-gray);
 }
 
 ::-webkit-scrollbar-thumb {

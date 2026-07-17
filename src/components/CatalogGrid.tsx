@@ -14,7 +14,7 @@ export default function CatalogGrid() {
     : products.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="catalogo" className="py-24 px-6 bg-[#0B0C10]">
+    <section id="catalogo" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,9 +22,9 @@ export default function CatalogGrid() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-[#C5A880] text-sm font-semibold uppercase tracking-widest">Nossos Modelos</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">Solicite seu Orçamento</h2>
-          <p className="text-white/60 mt-4 max-w-xl mx-auto">Escolha o modelo ideal para o seu banheiro e converse com um especialista pelo WhatsApp agora mesmo.</p>
+          <span className="text-[#C5A880] text-sm font-bold uppercase tracking-widest">Nossos Modelos</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">Solicite seu Orçamento</h2>
+          <p className="text-gray-600 mt-4 max-w-xl mx-auto">Escolha o modelo ideal para o seu banheiro e converse com um especialista pelo WhatsApp agora mesmo.</p>
         </motion.div>
 
         {/* Tabs */}
@@ -33,10 +33,10 @@ export default function CatalogGrid() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-md ${
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === cat
-                  ? 'bg-gradient-to-r from-[#C5A880] to-[#D4AF37] text-black shadow-[0_0_24px_rgba(197,168,128,0.4)] border border-transparent'
-                  : 'bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/30'
+                  ? 'bg-[#C5A880] text-white shadow-md'
+                  : 'text-gray-600 hover:text-[#C5A880] hover:bg-gray-50 border border-gray-200'
               }`}
             >
               {cat}

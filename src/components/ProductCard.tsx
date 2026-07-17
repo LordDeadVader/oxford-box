@@ -15,7 +15,7 @@ export default function ProductCard({ product, onOpenModal }: Props) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4 }}
-      className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md cursor-pointer hover:border-[#C5A880]/30 hover:shadow-[0_8px_32px_rgba(197,168,128,0.15)] transition-all duration-300"
+      className="group relative flex flex-col rounded-2xl bg-white border border-gray-100 overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 h-full cursor-pointer"
       onClick={() => onOpenModal(product)}
     >
       {/* Image */}
@@ -25,16 +25,27 @@ export default function ProductCard({ product, onOpenModal }: Props) {
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#C5A880]/90 text-black text-xs font-bold">
-          {product.tag}
-        </span>
       </div>
 
       {/* Info */}
-      <div className="p-6">
-        <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-[#C5A880] transition-colors">{product.name}</h3>
-        <p className="text-white/60 text-sm leading-relaxed mb-5">{product.description}</p>
+      <div className="flex flex-col flex-grow p-6">
+        <div className="mb-2">
+          <span className="inline-block px-3 py-1 rounded-full bg-[#C5A880]/10 text-[#C5A880] text-xs font-bold uppercase tracking-wider">
+            {product.tag}
+          </span>
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">{product.description}</p>
+        
+        <div className="space-y-2 mb-6">
+          {product.details?.slice(0, 3).map((detail, idx) => (
+            <div key={idx} className="flex items-start gap-2">
+              <span className="text-[#C5A880] mt-0.5">•</span>
+              <span className="text-gray-600 text-sm">{detail}</span>
+            </div>
+          ))}
+        </div>
+
         <button
           onClick={(e) => {
             e.stopPropagation();
