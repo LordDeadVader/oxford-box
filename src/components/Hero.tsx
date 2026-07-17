@@ -83,7 +83,15 @@ export default function Hero() {
           </motion.p>
 
           {/* WhatsApp CTA */}
-          <motion.div variants={itemVariants} className="mt-8 flex justify-center">
+          <motion.div variants={itemVariants} className="mt-8 flex flex-col items-center justify-center">
+            
+            <div className="mb-6 relative group cursor-default">
+              <div className="absolute inset-0 bg-yellow-400 blur-md opacity-70 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+              <div className="relative px-8 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-[#D4AF37] text-black font-extrabold text-2xl md:text-3xl tracking-tight shadow-xl border-2 border-yellow-200">
+                A partir de R$380,00 M²
+              </div>
+            </div>
+
             <a
               href={makeWhatsAppUrl('Olá! Gostaria de um orçamento para Box de Banheiro. Vim pelo site.')}
               target="_blank"
