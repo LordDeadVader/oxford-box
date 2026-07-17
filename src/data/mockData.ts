@@ -1,42 +1,48 @@
-export const WHATSAPP_NUMBER = '5541993822240';
+export const WHATSAPP_NUMBER = '554199382240';
 export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const makeWhatsAppUrl = (message: string) =>
   `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`;
 
+export const heroImages = [
+  'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1920&q=80'
+];
+
 export const diferenciais = [
   {
     id: 1,
-    icon: 'Cog',
-    title: 'Roldanas Aparentes em Inox',
-    description: 'Mecanismo de deslizamento suave com zero ruído. Roldanas de alta precisão em aço inoxidável 304 com rolamento duplo.',
+    icon: 'Shield',
+    title: 'Vidro Temperado 8mm',
+    description: 'Trabalhamos exclusivamente com vidros Blindex de 8mm, garantindo a máxima segurança e durabilidade para a sua família.',
   },
   {
     id: 2,
-    icon: 'Shield',
-    title: 'Vidros Temperados e Laminados',
-    description: 'Máxima segurança e conformidade com a ABNT NBR 7199. Vidros extra-clear com tratamento anticalcário de fábrica.',
+    icon: 'Cog',
+    title: 'Perfis Sob Medida',
+    description: 'Nossos perfis de alumínio e inox são cortados milimetricamente para o seu banheiro, garantindo vedação perfeita contra vazamentos.',
   },
   {
     id: 3,
-    icon: 'Gem',
-    title: 'Ferragens Exclusivas',
-    description: 'Acabamentos em Preto Fosco, Dourado Champagne, Rosé Gold e Cromo Polido. Latão maciço com PVD de longa duração.',
+    icon: 'Ruler',
+    title: 'Instalação Ágil',
+    description: 'Instalação rápida e limpa em até 3 dias úteis. Nossa equipe técnica é especialista e não deixa sujeira após o serviço.',
   },
   {
     id: 4,
-    icon: 'Ruler',
-    title: 'Instalação Milimétrica',
-    description: 'Equipe especializada com nivelamento a laser e vedação perfeita em silicone neutro. Garantia de 5 anos.',
+    icon: 'Gem',
+    title: 'Garantia de 5 Anos',
+    description: 'Confiamos tanto em nossos materiais e instalação que oferecemos 5 anos de garantia contra defeitos de fábrica.',
   },
 ];
 
 export type ProductCategory =
   | 'Todos'
-  | 'Box Elegance'
-  | 'Box Teto ao Chão'
-  | 'Espelhos & LED'
-  | 'Guarda-corpos & Divisórias';
+  | 'Box Frontal'
+  | 'Box de Canto'
+  | 'Roldanas Aparentes (Elegance)'
+  | 'Box de Abrir';
 
 export interface Product {
   id: number;
@@ -51,100 +57,53 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    category: 'Box Elegance',
-    name: 'Box Elegance Gold 8mm',
-    tag: 'Linha Premium',
-    description: 'Vidro temperado extra-clear 8mm, ferragens em latão com acabamento dourado champagne.',
-    image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro 8mm temperado extra-clear', 'Roldanas aparentes em inox 304', 'Acabamento Dourado Champagne', 'Puxador tubular em latão', 'Anticalcário de fábrica'],
+    category: 'Box Frontal',
+    name: 'Box Frontal (F1)',
+    tag: 'Mais Vendido',
+    description: 'O modelo clássico para vãos retos. Composto por uma porta fixa e uma deslizante, otimizando o espaço do seu banheiro.',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+    details: ['Vidro temperado 8mm', 'Perfis de alumínio estrutural', 'Roldanas de nylon com rolamento', 'Trinco de segurança magnético'],
   },
   {
     id: 2,
-    category: 'Box Elegance',
-    name: 'Box Elegance Black Matte',
-    tag: 'Linha Premium',
-    description: 'Perfis e ferragens em preto fosco texturizado. Vidro fumê grafite 10mm de alta resistência.',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro 10mm temperado fumê', 'Acabamento Preto Fosco PVD', 'Roldanas duplas anti-ruído', 'Perfis de alumínio extrudado', 'Vedação em silicone neutro'],
+    category: 'Box de Canto',
+    name: 'Box de Canto (F2)',
+    tag: 'Ideal para L',
+    description: 'Solução perfeita para cantos. Abertura em 90 graus com duas portas de correr, garantindo o máximo de passagem.',
+    image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80',
+    details: ['Formato em L', 'Duas portas deslizantes', 'Transpasse perfeito sem vazamentos', 'Acabamentos em diversas cores'],
   },
   {
     id: 3,
-    category: 'Box Teto ao Chão',
-    name: 'Floor-to-Ceiling Crystal',
-    tag: 'Linha Arquitetônica',
-    description: 'Box do piso ao teto em vidro inteiriço. Máxima amplitude visual, sem perfil superior.',
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro 10mm ou 12mm temperado', 'Sem perfil superior (frameless)', 'Fixação estrutural em inox', 'Altura personalizada até 3m', 'Dobradiças de alta resistência'],
+    category: 'Roldanas Aparentes (Elegance)',
+    name: 'Box Elegance Inox',
+    tag: 'Alto Padrão',
+    description: 'O suprassumo do design. Roldanas blindadas em aço inox 304 correndo sobre tubo superior. Sem perfil embaixo.',
+    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80',
+    details: ['Sistema Elegance Inox 304', 'Sem trilho inferior', 'Roldanas blindadas aparentes', 'Vidro 8mm Extra-Clear opcional'],
   },
   {
     id: 4,
-    category: 'Box Teto ao Chão',
-    name: 'Infinity Walk-In',
-    tag: 'Linha Arquitetônica',
-    description: 'Painel fixo sem trilhos. Design minimalista e abertura walk-in para banheiros modernos.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro fixo 12mm laminado', 'Perfil U em inox escovado', 'Sem trilho no piso', 'Instalação em 4h', 'Personalização total'],
-  },
-  {
-    id: 5,
-    category: 'Espelhos & LED',
-    name: 'Espelho LED Orgânico',
-    tag: 'Linha Iluminação',
-    description: 'Espelho com retroiluminação LED 6500K, formato orgânico e toque touch para acionamento.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80',
-    details: ['LED 6500K embutido', 'Touch sensor ON/OFF', 'Anti-embaçante (antifogging)', 'Formato orgânico sob medida', 'Bivolt automático'],
-  },
-  {
-    id: 6,
-    category: 'Espelhos & LED',
-    name: 'Espelho Bisotê Clássico',
-    tag: 'Linha Classic',
-    description: 'Espelho com borda bisotada de 25mm em ângulo polido. Elegância clássica e atemporal.',
-    image: 'https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=1000&q=80',
-    details: ['Bisotê 25mm polido', 'Vidro prata 4mm', 'Suporte oculto em inox', 'Tamanhos padronizados ou sob medida', 'Instalação inclusa'],
-  },
-  {
-    id: 7,
-    category: 'Guarda-corpos & Divisórias',
-    name: 'Guarda-corpo Sacada Premium',
-    tag: 'Linha Arquitetônica',
-    description: 'Guarda-corpo em vidro laminado 10+10mm com perfis em alumínio anodizado ou aço inox.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro laminado 10+10mm', 'Perfis em inox AISI 304', 'Conforme NBR 14718', 'Cálculo estrutural incluso', 'ART de instalação'],
-  },
-  {
-    id: 8,
-    category: 'Guarda-corpos & Divisórias',
-    name: 'Divisória de Ambiente',
-    tag: 'Linha Corporativa',
-    description: 'Painéis divisórios em vidro temperado para ambientes residenciais e corporativos.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80',
-    details: ['Vidro 8mm ou 10mm temperado', 'Perfil alumínio ou inox', 'Com ou sem passagem de porta', 'Medidas sob encomenda', 'Entrega em 15 dias'],
+    category: 'Box de Abrir',
+    name: 'Box com Porta de Abrir',
+    tag: 'Minimalista',
+    description: 'Para vãos menores ou necessidades de acessibilidade. Porta pivotante com dobradiças de latão maciço.',
+    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80',
+    details: ['Dobradiças de Alta Resistência', 'Fechamento suave', 'Puxador tipo H em Inox', 'Vedação total com silicone neutro'],
   },
 ];
 
 export const categories: ProductCategory[] = [
   'Todos',
-  'Box Elegance',
-  'Box Teto ao Chão',
-  'Espelhos & LED',
-  'Guarda-corpos & Divisórias',
+  'Box Frontal',
+  'Box de Canto',
+  'Roldanas Aparentes (Elegance)',
+  'Box de Abrir',
 ];
 
 export const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Box Elegance Gold instalado' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80', alt: 'Box teto ao chão minimalista' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80', alt: 'Espelho LED orgânico' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Guarda-corpo sacada premium' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80', alt: 'Divisória de vidro' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=700&q=80', alt: 'Detalhes ferragens inox' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80', alt: 'Roldanas aparentes premium' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80', alt: 'Banheiro de alto padrão' },
-];
-
-export const finishes = [
-  { id: 'black', label: 'Preto Fosco', color: '#1a1a1a', description: 'PVD Preto Fosco. Ultra moderno e sofisticado. Resistente a riscos e manchas.', accentColor: '#333' },
-  { id: 'chrome', label: 'Cromado', color: '#C0C0C0', description: 'Cromo Polido. Clássico e intemporal. Alto brilho que valoriza qualquer ambiente.', accentColor: '#ddd' },
-  { id: 'gold', label: 'Dourado Champagne', color: '#C5A880', description: 'Dourado Champagne PVD. Elegância máxima com tom quente e aconchegante.', accentColor: '#D4AF37' },
-  { id: 'bronze', label: 'Bronze Escovado', color: '#8B6914', description: 'Bronze Escovado. Textura única e exclusiva. Ideal para projetos autorais.', accentColor: '#A0792A' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80', alt: 'Box instalado' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80', alt: 'Box de banheiro alto padrão' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=700&q=80', alt: 'Roldanas aparentes' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80', alt: 'Box vidro 8mm' },
 ];

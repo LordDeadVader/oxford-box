@@ -22,9 +22,9 @@ export default function CatalogGrid() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-[#C5A880] text-sm font-semibold uppercase tracking-widest">Nossos Produtos</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">Catálogo Completo</h2>
-          <p className="text-white/50 mt-4 max-w-xl mx-auto">Cada peça projetada para transformar espaços em obras de arte arquitetônica.</p>
+          <span className="text-[#C5A880] text-sm font-semibold uppercase tracking-widest">Nossos Modelos</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">Solicite seu Orçamento</h2>
+          <p className="text-white/60 mt-4 max-w-xl mx-auto">Escolha o modelo ideal para o seu banheiro e converse com um especialista pelo WhatsApp agora mesmo.</p>
         </motion.div>
 
         {/* Tabs */}
