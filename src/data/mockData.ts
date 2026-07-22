@@ -5,9 +5,10 @@ export const makeWhatsAppUrl = (message: string) =>
   `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`;
 
 export const heroImages = [
-  '/box1.jpg',
-  '/box2.jpg',
-  '/box3.jpg'
+  '/box-1.jpeg',
+  '/box-2.jpeg',
+  '/box-3.jpeg',
+  '/box-4.jpeg'
 ];
 
 export const diferenciais = [
@@ -54,44 +55,25 @@ export interface Product {
   details: string[];
 }
 
-export const products: Product[] = [
-  {
-    id: 1,
-    category: 'Box Frontal',
-    name: 'Box Frontal (F1)',
-    tag: 'Mais Vendido',
-    description: 'O modelo clássico para vãos retos. Composto por uma porta fixa e uma deslizante, otimizando o espaço do seu banheiro.',
-    image: '/box1.jpg',
-    details: ['Vidro temperado 8mm', 'Perfis de alumínio estrutural', 'Roldanas de nylon com rolamento', 'Trinco de segurança magnético'],
-  },
-  {
-    id: 2,
-    category: 'Box de Canto',
-    name: 'Box de Canto (F2)',
-    tag: 'Ideal para L',
-    description: 'Solução perfeita para cantos. Abertura em 90 graus com duas portas de correr, garantindo o máximo de passagem.',
-    image: '/box2.jpg',
-    details: ['Formato em L', 'Duas portas deslizantes', 'Transpasse perfeito sem vazamentos', 'Acabamentos em diversas cores'],
-  },
-  {
-    id: 3,
-    category: 'Roldanas Aparentes (Elegance)',
-    name: 'Box Elegance Inox',
-    tag: 'Alto Padrão',
-    description: 'O suprassumo do design. Roldanas blindadas em aço inox 304 correndo sobre tubo superior. Sem perfil embaixo.',
-    image: '/box3.jpg',
-    details: ['Sistema Elegance Inox 304', 'Sem trilho inferior', 'Roldanas blindadas aparentes', 'Vidro 8mm Extra-Clear opcional'],
-  },
-  {
-    id: 4,
-    category: 'Box de Abrir',
-    name: 'Box com Porta de Abrir',
-    tag: 'Minimalista',
-    description: 'Para vãos menores ou necessidades de acessibilidade. Porta pivotante com dobradiças de latão maciço.',
-    image: '/box4.jpg',
-    details: ['Dobradiças de Alta Resistência', 'Fechamento suave', 'Puxador tipo H em Inox', 'Vedação total com silicone neutro'],
-  },
-];
+const getCategory = (index: number): ProductCategory => {
+  const cats: ProductCategory[] = ['Box Frontal', 'Box de Canto', 'Roldanas Aparentes (Elegance)', 'Box de Abrir'];
+  return cats[index % 4];
+};
+
+const getTitle = (index: number): string => {
+  const titles = ['Box Elegance Ouro', 'Box Padrão Luxo', 'Box Inox Premium', 'Box Pivotante Glass', 'Box Minimalista', 'Box Frontal Clássico', 'Box Canto Inteligente'];
+  return titles[index % titles.length] + ' ' + (index + 1);
+};
+
+export const products: Product[] = Array.from({ length: 14 }).map((_, i) => ({
+  id: i + 1,
+  category: getCategory(i),
+  name: getTitle(i),
+  tag: i % 3 === 0 ? 'Mais Vendido' : i % 4 === 0 ? 'Alto Padrão' : 'Premium',
+  description: 'Design sofisticado com vidro de alta segurança, perfeito para valorizar e otimizar o espaço do seu banheiro.',
+  image: `/box-${i + 1}.jpeg`,
+  details: ['Vidro temperado 8mm', 'Acabamento de luxo', 'Vedação total'],
+}));
 
 export const categories: ProductCategory[] = [
   'Todos',
@@ -101,10 +83,8 @@ export const categories: ProductCategory[] = [
   'Box de Abrir',
 ];
 
-export const galleryImages = [
-  { id: 1, src: '/box1.jpg', alt: 'Box instalado' },
-  { id: 2, src: '/box2.jpg', alt: 'Box de banheiro alto padrão' },
-  { id: 3, src: '/box3.jpg', alt: 'Roldanas aparentes' },
-  { id: 4, src: '/box4.jpg', alt: 'Box vidro 8mm' },
-  { id: 5, src: '/box5.jpg', alt: 'Box design' },
-];
+export const galleryImages = Array.from({ length: 14 }).map((_, i) => ({
+  id: i + 1,
+  src: `/box-${i + 1}.jpeg`,
+  alt: `Box instalado modelo ${i + 1}`,
+}));
