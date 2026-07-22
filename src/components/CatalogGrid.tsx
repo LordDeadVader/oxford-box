@@ -14,7 +14,7 @@ export default function CatalogGrid() {
     : products.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="catalogo" className="py-24 px-6 bg-white">
+    <section id="catalogo" aria-label="Catálogo de Box de Banheiro" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
