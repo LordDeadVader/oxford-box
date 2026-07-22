@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden"
     >
       {/* Background Slideshow */}
       <div className="absolute inset-0 z-0 bg-black">
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center mt-12">
+      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center mt-16">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -65,7 +65,7 @@ export default function Hero() {
           {/* H1 */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight tracking-tight drop-shadow-2xl"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-tight tracking-tight drop-shadow-2xl"
           >
             A Excelência do{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
@@ -77,29 +77,29 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="max-w-2xl text-white/80 text-base md:text-xl leading-relaxed drop-shadow-lg font-medium mt-2"
+            className="max-w-2xl text-white/80 text-lg md:text-2xl leading-relaxed drop-shadow-lg font-medium mt-2"
           >
             Vidro temperado de extrema segurança, acabamento premium e vedação absoluta. Qualidade incomparável para o seu ambiente.
           </motion.p>
 
           {/* WhatsApp CTA */}
-          <motion.div variants={itemVariants} className="mt-10 flex flex-col items-center justify-center gap-6">
+          <motion.div variants={itemVariants} className="mt-12 flex flex-col items-center justify-center gap-8">
             
             <a
               href={makeWhatsAppUrl('Olá! Gostaria de um orçamento para Box de Banheiro. Vim pelo site.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 px-10 py-4 bg-white text-black text-sm md:text-base font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300"
+              className="group flex items-center justify-center gap-3 px-12 py-5 bg-white text-black text-base md:text-lg font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300 rounded-sm"
             >
               Solicitar Orçamento
             </a>
 
-            <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-[#C5A880]/10 backdrop-blur-md border border-[#C5A880]/40 text-white font-medium text-sm md:text-base tracking-wide shadow-[0_0_30px_rgba(197,168,128,0.2)]">
-              <span className="bg-[#C5A880] text-black text-[10px] md:text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full animate-pulse">
-                Promoção
+            <div className="inline-flex items-center gap-4 px-8 py-3.5 rounded-full bg-red-600/20 backdrop-blur-md border border-red-500/50 text-white font-medium text-base md:text-lg tracking-wide shadow-[0_0_50px_rgba(239,68,68,0.6)]">
+              <span className="bg-red-600 text-white text-xs md:text-sm font-black uppercase tracking-widest px-4 py-1.5 rounded-full animate-pulse shadow-lg shadow-red-600/50">
+                🔥 Mega Promoção
               </span>
               <span>
-                A partir de <span className="font-bold text-white text-lg">R$ 380,00</span> m²
+                A partir de <span className="font-extrabold text-white text-2xl md:text-3xl drop-shadow-lg">R$ 380,00</span> m²
               </span>
             </div>
 

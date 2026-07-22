@@ -36,8 +36,8 @@ export default function ProductModal({ product, onClose }: Props) {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="w-full md:w-2/3 relative" style={{ minHeight: '50vh' }}>
-              <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+            <div className="w-full md:w-2/3 relative bg-black flex items-center justify-center" style={{ minHeight: '50vh' }}>
+              <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-contain" />
             </div>
 
             <div className="w-full md:w-1/3 p-8 flex flex-col justify-center items-center text-center bg-white">

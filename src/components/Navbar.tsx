@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="flex items-center transition-transform hover:scale-105">
-            <img src="/logo.png" alt="Oxford Box" className="h-16 md:h-20 w-auto object-contain" />
+            <img src="/logo.png" alt="Oxford Box" className="h-20 md:h-32 w-auto object-contain" />
           </a>
 
           {/* Desktop Links */}
