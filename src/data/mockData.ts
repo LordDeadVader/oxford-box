@@ -5,10 +5,10 @@ export const makeWhatsAppUrl = (message: string) =>
   `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`;
 
 export const heroImages = [
-  '/box-1.jpeg',
-  '/box-2.jpeg',
-  '/box-3.jpeg',
-  '/box-4.jpeg'
+  '/box-1.png',
+  '/box-2.png',
+  '/box-3.png',
+  '/box-4.png'
 ];
 
 export const diferenciais = [
@@ -61,8 +61,7 @@ const getCategory = (index: number): ProductCategory => {
 };
 
 const getTitle = (index: number): string => {
-  const titles = ['Box Elegance Ouro', 'Box Padrão Luxo', 'Box Inox Premium', 'Box Pivotante Glass', 'Box Minimalista', 'Box Frontal Clássico', 'Box Canto Inteligente'];
-  return titles[index % titles.length] + ' ' + (index + 1);
+  return `Box #${String(index + 1).padStart(3, '0')}`;
 };
 
 export const products: Product[] = Array.from({ length: 14 }).map((_, i) => ({
@@ -71,7 +70,7 @@ export const products: Product[] = Array.from({ length: 14 }).map((_, i) => ({
   name: getTitle(i),
   tag: i % 3 === 0 ? 'Mais Vendido' : i % 4 === 0 ? 'Alto Padrão' : 'Premium',
   description: 'Design sofisticado com vidro de alta segurança, perfeito para valorizar e otimizar o espaço do seu banheiro.',
-  image: `/box-${i + 1}.jpeg`,
+  image: `/box-${i + 1}.png`,
   details: ['Vidro temperado 8mm', 'Acabamento de luxo', 'Vedação total'],
 }));
 
@@ -85,6 +84,6 @@ export const categories: ProductCategory[] = [
 
 export const galleryImages = Array.from({ length: 14 }).map((_, i) => ({
   id: i + 1,
-  src: `/box-${i + 1}.jpeg`,
+  src: `/box-${i + 1}.png`,
   alt: `Box instalado modelo ${i + 1}`,
 }));

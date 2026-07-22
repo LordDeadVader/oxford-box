@@ -13,7 +13,7 @@ export default function MaterialInfo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            src="/box-1.jpeg"
+            src="/box-1.png"
             alt="Detalhe do vidro"
             className="rounded-2xl w-full h-64 object-cover"
           />
@@ -22,7 +22,7 @@ export default function MaterialInfo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            src="/box-2.jpeg"
+            src="/box-2.png"
             alt="Roldanas"
             className="rounded-2xl w-full h-64 object-cover mt-8"
           />
