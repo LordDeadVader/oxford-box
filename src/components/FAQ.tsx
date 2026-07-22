@@ -40,7 +40,7 @@ export default function FAQ() {
           className="relative h-[600px] rounded-2xl overflow-hidden shadow-lg hidden lg:block"
         >
           <img
-            src="/box5.jpg"
+            src="/box-5.png"
             alt="Banheiro Elegante com Box"
             className="w-full h-full object-cover"
           />
