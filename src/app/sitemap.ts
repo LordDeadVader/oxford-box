@@ -3,25 +3,25 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://oxford-box.vercel.app',
+      url: 'https://www.oxfordbox.com.br',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://oxford-box.vercel.app/#catalogo',
+      url: 'https://www.oxfordbox.com.br/#catalogo',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: 'https://oxford-box.vercel.app/#galeria',
+      url: 'https://www.oxfordbox.com.br/#galeria',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://oxford-box.vercel.app/#contato',
+      url: 'https://www.oxfordbox.com.br/#contato',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

@@ -6,7 +6,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
-const SITE_URL = 'https://oxford-box.vercel.app';
+const SITE_URL = 'https://www.oxfordbox.com.br';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

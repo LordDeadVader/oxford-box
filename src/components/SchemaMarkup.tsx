@@ -4,14 +4,14 @@ export default function SchemaMarkup() {
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://oxford-box.vercel.app/#business",
+        "@id": "https://www.oxfordbox.com.br/#business",
         "name": "Oxford Box",
         "description": "Especialistas em box de banheiro premium com vidro temperado 8mm, roldanas em inox e instalação profissional. Atendemos Curitiba e região metropolitana.",
-        "url": "https://oxford-box.vercel.app",
+        "url": "https://www.oxfordbox.com.br",
         "telephone": "+55-41-99382240",
         "priceRange": "R$ 380 - R$ 2000",
-        "image": "https://oxford-box.vercel.app/logo.png",
-        "logo": "https://oxford-box.vercel.app/logo.png",
+        "image": "https://www.oxfordbox.com.br/logo.png",
+        "logo": "https://www.oxfordbox.com.br/logo.png",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Curitiba",
@@ -38,7 +38,8 @@ export default function SchemaMarkup() {
           }
         ],
         "sameAs": [
-          "https://wa.me/554199382240"
+          "https://wa.me/554199382240",
+          "https://www.oxfordbox.com.br"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -81,12 +82,12 @@ export default function SchemaMarkup() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://oxford-box.vercel.app/#website",
-        "url": "https://oxford-box.vercel.app",
+        "@id": "https://www.oxfordbox.com.br/#website",
+        "url": "https://www.oxfordbox.com.br",
         "name": "Oxford Box",
         "description": "Box de banheiro premium em Curitiba. Vidro temperado 8mm, roldanas em inox e instalação profissional.",
         "publisher": {
-          "@id": "https://oxford-box.vercel.app/#business"
+          "@id": "https://www.oxfordbox.com.br/#business"
         },
         "potentialAction": {
           "@type": "SearchAction",
