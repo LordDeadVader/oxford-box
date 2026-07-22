@@ -47,12 +47,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center mt-16">
+      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center mt-32 md:mt-40">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-5"
         >
           {/* Pill Tag */}
           <motion.div variants={itemVariants}>
@@ -65,25 +65,25 @@ export default function Hero() {
           {/* H1 */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-tight tracking-tight drop-shadow-2xl"
+            className="max-w-4xl text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-none tracking-tight drop-shadow-2xl"
           >
             A Excelência do{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
               Box 8mm
-            </span>
-            <br className="hidden md:block" /> para o Seu Banheiro
+            </span>{' '}
+            para o Seu Banheiro
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="max-w-2xl text-white/80 text-lg md:text-2xl leading-relaxed drop-shadow-lg font-medium mt-2"
+            className="max-w-2xl text-white/80 text-lg md:text-2xl leading-relaxed drop-shadow-lg font-medium mt-1"
           >
             Vidro temperado de extrema segurança, acabamento premium e vedação absoluta. Qualidade incomparável para o seu ambiente.
           </motion.p>
 
           {/* WhatsApp CTA */}
-          <motion.div variants={itemVariants} className="mt-12 flex flex-col items-center justify-center gap-8">
+          <motion.div variants={itemVariants} className="mt-8 flex flex-col items-center justify-center gap-6">
             
             <a
               href={makeWhatsAppUrl('Olá! Gostaria de um orçamento para Box de Banheiro. Vim pelo site.')}
@@ -108,7 +108,7 @@ export default function Hero() {
       </div>
 
       {/* Carousel Indicators */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {heroImages.map((_, idx) => (
           <div
             key={idx}

@@ -36,8 +36,17 @@ export default function ProductModal({ product, onClose }: Props) {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="w-full md:w-2/3 relative bg-black flex items-center justify-center" style={{ minHeight: '50vh' }}>
-              <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-contain" />
+            <div className="w-full md:w-2/3 relative flex items-center justify-center overflow-hidden bg-gray-900" style={{ minHeight: '50vh' }}>
+              {/* Fundo Desfocado (Blurred Background) */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center blur-xl scale-110 opacity-50"
+                style={{ backgroundImage: `url('${product.image}')` }}
+              />
+              {/* Overlay Escuro para destacar a foto principal */}
+              <div className="absolute inset-0 bg-black/30" />
+              
+              {/* Foto Principal */}
+              <img src={product.image} alt={product.name} className="relative z-10 w-full h-full object-contain p-2 md:p-6" />
             </div>
 
             <div className="w-full md:w-1/3 p-8 flex flex-col justify-center items-center text-center bg-white">
