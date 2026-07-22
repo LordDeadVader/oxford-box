@@ -94,8 +94,13 @@ export default function Hero() {
               Solicitar Orçamento
             </a>
 
-            <div className="inline-block px-5 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white/90 font-medium text-sm md:text-base tracking-wide shadow-lg">
-              A partir de <span className="font-bold text-white">R$ 380,00</span> m²
+            <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-[#C5A880]/10 backdrop-blur-md border border-[#C5A880]/40 text-white font-medium text-sm md:text-base tracking-wide shadow-[0_0_30px_rgba(197,168,128,0.2)]">
+              <span className="bg-[#C5A880] text-black text-[10px] md:text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full animate-pulse">
+                Promoção
+              </span>
+              <span>
+                A partir de <span className="font-bold text-white text-lg">R$ 380,00</span> m²
+              </span>
             </div>
 
           </motion.div>
