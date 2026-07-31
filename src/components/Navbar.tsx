@@ -1,13 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { makeWhatsAppUrl } from '@/data/mockData';
 
 const navLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Catálogo', href: '#catalogo' },
-  { label: 'Galeria', href: '#galeria' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Início', href: '#inicio', scroll: true },
+  { label: 'Catálogo', href: '#catalogo', scroll: true },
+  { label: 'Galeria', href: '#galeria', scroll: true },
+  { label: 'Blog', href: '/blog', scroll: false },
+  { label: 'Contato', href: '#contato', scroll: true },
 ];
 
 export default function Navbar() {
@@ -47,7 +49,8 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
+          {navLinks.map((link) => (
+            link.scroll ? (
               <a
                 key={link.href}
                 href={link.href}
@@ -57,7 +60,17 @@ export default function Navbar() {
                 {link.label}
                 <span className="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-[#C5A880] transition-all duration-300 group-hover:w-full" />
               </a>
-            ))}
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-gray-300 hover:text-white text-sm font-semibold tracking-wide transition-colors duration-200 relative group font-sans uppercase"
+              >
+                {link.label}
+                <span className="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-[#C5A880] transition-all duration-300 group-hover:w-full" />
+              </Link>
+            )
+          ))}
           </div>
 
           {/* CTA Button */}
